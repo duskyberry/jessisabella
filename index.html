@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Isabella Abigail cumple 2 añitos 🤠✨</title>
+    <meta
+      name="description"
+      content="Acompáñanos a celebrar los 2 añitos de Isabella Abigail — una invitación con todo el corazón de Jessie de Toy Story."
+    />
+
+    <!-- Social sharing -->
+    <meta property="og:title" content="¡Isabella Abigail cumple 2 añitos! 🤠" />
+    <meta
+      property="og:description"
+      content="Haz recibido una invitación muy especial. Acompáñanos a celebrar."
+    />
+    <meta
+      property="og:image"
+      content="https://raw.githubusercontent.com/edvardoviedo/recursos/refs/heads/main/duskyberry/thumbnail.jpg"
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:image"
+      content="https://raw.githubusercontent.com/edvardoviedo/recursos/refs/heads/main/duskyberry/thumbnail.jpg"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- ===================== FONDO FIJO ===================== -->
+    <div class="bg-fixed" aria-hidden="true"></div>
+
+    <!-- ===================== PANTALLA DE ENTRADA ===================== -->
+    <section id="intro-screen" class="intro-screen">
+      <div class="intro-glow" aria-hidden="true"></div>
+      <p class="intro-eyebrow">💌 Para ti</p>
+      <h1 class="intro-text">Haz recibido una<br />invitación muy especial</h1>
+      <div class="intro-gif-wrap">
+        <img
+          class="intro-gif"
+          src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExN3FjZHN4cnJ3aDJ2ems1eTN3NTMxZzc1d3Q1MHV1emUzZW51MDlxdiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/Rko48CitRwWKEjriS2/giphy.gif"
+          alt="Jessie de Toy Story saludando con alegría"
+          loading="eager"
+        />
+      </div>
+      <button
+        id="discover-btn"
+        class="discover-btn"
+        type="button"
+        aria-label="Descubrir la invitación"
+      >
+        <span class="discover-star">⭐</span>
+        <span>DESCUBRIR</span>
+        <span class="discover-star">⭐</span>
+      </button>
+      <div class="intro-hint" aria-hidden="true">
+        <span class="intro-hat">🤠</span>
+      </div>
+    </section>
+
+    <!-- ===================== CANVAS CONFETI ===================== -->
+    <canvas id="confetti-canvas" aria-hidden="true"></canvas>
+
+    <!-- ===================== CONTENIDO PRINCIPAL ===================== -->
+    <main id="invitation" class="invitation" hidden>
+      <!-- Reproductor de música -->
+      <div
+        class="music-pill"
+        id="music-pill"
+        role="group"
+        aria-label="Reproductor de música"
+      >
+        <button
+          id="play-toggle"
+          class="music-btn"
+          type="button"
+          aria-label="Pausar música"
+        >
+          <svg
+            id="icon-pause"
+            viewBox="0 0 24 24"
+            width="16"
+            height="16"
+            aria-hidden="true"
+          >
+            <rect
+              x="5"
+              y="4"
+              width="4.5"
+              height="16"
+              rx="1.2"
+              fill="currentColor"
+            />
+            <rect
+              x="14.5"
+              y="4"
+              width="4.5"
+              height="16"
+              rx="1.2"
+              fill="currentColor"
+            />
+          </svg>
+          <svg
+            id="icon-play"
+            viewBox="0 0 24 24"
+            width="16"
+            height="16"
+            aria-hidden="true"
+            hidden
+          >
+            <path d="M6 4.5L19 12L6 19.5V4.5Z" fill="currentColor" />
+          </svg>
+        </button>
+        <span class="music-note">🎵</span>
+        <input
+          type="range"
+          id="volume-range"
+          class="volume-range"
+          min="0"
+          max="1"
+          step="0.01"
+          value="0.5"
+          aria-label="Volumen"
+        />
+      </div>
+      <audio
+        id="bg-audio"
+        src="https://raw.githubusercontent.com/edvardoviedo/Jessie-s-party/main/Toy%20Story%20-%20Yo%20Soy%20Tu%20Amigo%20Fiel%20By_%20Ricardo%20Murgu%C3%ADa%20Video%20%26%20Letra.mp3"
+        loop
+        preload="auto"
+      ></audio>
+
+      <!-- HERO -->
+      <section class="hero reveal" aria-labelledby="hero-name">
+        <div class="hero-card">
+          <div class="hero-photo-wrap">
+            <img
+              class="hero-photo"
+              src="https://static.wikia.nocookie.net/heroes-and-villain/images/d/de/Profile_-_Jessie.jpg/revision/latest/thumbnail/width/360/height/360?cb=20210624204644"
+              alt="Jessie, la vaquerita de Toy Story"
+              loading="eager"
+            />
+            <span class="hero-ring" aria-hidden="true"></span>
+            <span class="hero-sparkle s1" aria-hidden="true">✨</span>
+            <span class="hero-sparkle s2" aria-hidden="true">⭐</span>
+            <span class="hero-sparkle s3" aria-hidden="true">🤠</span>
+          </div>
+          <p class="hero-eyebrow">Se celebra a lo grande</p>
+          <h1 id="hero-name" class="hero-name">Isabella Abigail</h1>
+          <p class="hero-sub">Cumple <span class="hero-num">2</span> añitos</p>
+        </div>
+      </section>
+
+      <div class="divider" data-star aria-hidden="true"><span>⭐</span></div>
+
+      <!-- MENSAJE EMOCIONAL -->
+      <section
+        class="section message-section reveal"
+        aria-label="Mensaje de la familia"
+      >
+        <div class="glass-card message-card">
+          <p class="message-text">
+            Hoy celebramos con inmensa gratitud tus 2 años, mi niña. 🤍✨
+          </p>
+          <p class="message-text">
+            Gracias, Dios, por estos dos años llenos de amor, sonrisas y
+            momentos que han hecho nuestra vida más bonita.
+          </p>
+          <p class="message-text">
+            Nos hará muy felices compartir este día tan especial rodeados de
+            nuestra familia y amigos, quienes han sido parte de esta hermosa
+            historia.
+          </p>
+          <p class="message-text message-cta">
+            Acompáñanos a celebrar sus 2 añitos. 🎂🤍
+          </p>
+        </div>
+      </section>
+
+      <div class="wide-gif-wrap reveal">
+        <img
+          class="wide-gif"
+          src="https://c.tenor.com/RJQKk1uGs88AAAAd/tenor.gif"
+          alt="Animación festiva de Toy Story"
+          loading="lazy"
+        />
+      </div>
+
+      <div class="divider" data-star aria-hidden="true"><span>⭐</span></div>
+
+      <!-- COUNTDOWN -->
+      <section
+        class="section countdown-section reveal"
+        aria-label="Cuenta regresiva para la fiesta"
+      >
+        <p class="section-eyebrow">Faltan solo</p>
+        <div class="glass-card countdown-card">
+          <div id="countdown" class="countdown" aria-live="polite">
+            <div class="countdown-unit">
+              <span id="cd-days" class="countdown-num">00</span
+              ><span class="countdown-label">días</span>
+            </div>
+            <span class="countdown-colon">:</span>
+            <div class="countdown-unit">
+              <span id="cd-hours" class="countdown-num">00</span
+              ><span class="countdown-label">hrs</span>
+            </div>
+            <span class="countdown-colon">:</span>
+            <div class="countdown-unit">
+              <span id="cd-mins" class="countdown-num">00</span
+              ><span class="countdown-label">min</span>
+            </div>
+            <span class="countdown-colon">:</span>
+            <div class="countdown-unit">
+              <span id="cd-secs" class="countdown-num">00</span
+              ><span class="countdown-label">seg</span>
+            </div>
+          </div>
+          <p class="countdown-date">6 de septiembre, 2026 · 5:30 pm</p>
+        </div>
+      </section>
+
+      <div class="wide-gif-wrap reveal">
+        <img
+          class="wide-gif"
+          src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExcjR0MzU5NHk3NmJvMGg0ZG1xbDVqMHl4MmdrdWVnMHRvazFrYTRsdSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7V8vnH1ujyvyE/giphy.gif"
+          alt="Animación festiva de Toy Story"
+          loading="lazy"
+        />
+      </div>
+
+      <div class="divider" data-star aria-hidden="true"><span>⭐</span></div>
+
+      <!-- GALERÍA -->
+      <section
+        class="section gallery-section reveal"
+        aria-label="Galería de fotos"
+      >
+        <p class="section-eyebrow">Un vistazo</p>
+        <h2 class="section-title">Nuestros momentos</h2>
+        <div class="gallery-track" role="list">
+          <!-- Foto 1 -->
+          <figure class="gallery-item" role="listitem">
+            <img
+              src="https://placehold.co/500x650/FFD3E8/8B5E3C?text=Foto+1"
+              alt="Foto 1"
+              loading="lazy"
+            /><span class="gallery-emoji">🤠</span>
+          </figure>
+          <!-- Foto 2 -->
+          <figure class="gallery-item" role="listitem">
+            <img
+              src="https://placehold.co/500x650/BDF3F0/8B5E3C?text=Foto+2"
+              alt="Foto 2"
+              loading="lazy"
+            /><span class="gallery-emoji">🚀</span>
+          </figure>
+          <!-- Foto 3 -->
+          <figure class="gallery-item" role="listitem">
+            <img
+              src="https://placehold.co/500x650/FCE3A6/8B5E3C?text=Foto+3"
+              alt="Foto 3"
+              loading="lazy"
+            /><span class="gallery-emoji">👩‍🌾</span>
+          </figure>
+          <!-- Foto 4 -->
+          <figure class="gallery-item" role="listitem">
+            <img
+              src="https://placehold.co/500x650/F6B8D6/8B5E3C?text=Foto+4"
+              alt="Foto 4"
+              loading="lazy"
+            /><span class="gallery-emoji">🦖</span>
+          </figure>
+          <!-- Foto 5 -->
+          <figure class="gallery-item" role="listitem">
+            <img
+              src="https://placehold.co/500x650/AFE9E6/8B5E3C?text=Foto+5"
+              alt="Foto 5"
+              loading="lazy"
+            /><span class="gallery-emoji">🐎</span>
+          </figure>
+          <!-- Foto 6 -->
+          <figure class="gallery-item" role="listitem">
+            <img
+              src="https://placehold.co/500x650/F8D77E/8B5E3C?text=Foto+6"
+              alt="Foto 6"
+              loading="lazy"
+            /><span class="gallery-emoji">🧸</span>
+          </figure>
+          <!-- Foto 7 -->
+          <figure class="gallery-item" role="listitem">
+            <img
+              src="https://placehold.co/500x650/F2A9CE/8B5E3C?text=Foto+7"
+              alt="Foto 7"
+              loading="lazy"
+            /><span class="gallery-emoji">⭐</span>
+          </figure>
+        </div>
+        <p class="gallery-hint">← desliza para ver más →</p>
+      </section>
+
+      <div class="divider" data-star aria-hidden="true"><span>⭐</span></div>
+
+      <!-- EVENTO -->
+      <section
+        class="section event-section reveal"
+        aria-label="Detalles del evento"
+      >
+        <p class="section-eyebrow">Dónde será la magia</p>
+        <h2 class="section-title">Joy's Fiestas Infantiles</h2>
+        <div class="glass-card event-card">
+          <div class="map-wrap">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3602.623895882656!2d-100.9880448!3d25.450834699999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86886d681df4234d%3A0x94d19d35452620d1!2sJoys%20Fiestas%20Infantiles!5e0!3m2!1sen!2smx!4v1786759989210!5m2!1sen!2smx"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+              title="Ubicación de Joy's Fiestas Infantiles"
+            ></iframe>
+          </div>
+          <div class="event-actions">
+            <button
+              id="add-calendar"
+              class="event-btn event-btn-primary"
+              type="button"
+            >
+              📅 Agregar al calendario
+            </button>
+            <a
+              id="get-directions"
+              class="event-btn event-btn-secondary"
+              href="https://www.google.com/maps/dir/?api=1&destination=Joy%27s+Fiestas+Infantiles"
+              target="_blank"
+              rel="noopener"
+              >📍 Obtener dirección</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <div class="divider" data-star aria-hidden="true"><span>⭐</span></div>
+
+      <!-- ITINERARIO -->
+      <section
+        class="section itinerary-section reveal"
+        aria-label="Itinerario del evento"
+      >
+        <p class="section-eyebrow">Así viviremos el día</p>
+        <h2 class="section-title">Itinerario</h2>
+        <ol class="itinerary-list">
+          <li class="itinerary-item">
+            <span class="itinerary-icon">🤗</span
+            ><span class="itinerary-text">Bienvenida</span>
+          </li>
+          <li class="itinerary-item">
+            <span class="itinerary-icon">📸</span
+            ><span class="itinerary-text">Recepción de invitados y fotos</span>
+          </li>
+          <li class="itinerary-item">
+            <span class="itinerary-icon">🍽️</span
+            ><span class="itinerary-text">Comida</span>
+          </li>
+          <li class="itinerary-item">
+            <span class="itinerary-icon">🍿</span
+            ><span class="itinerary-text">Barras de snacks</span>
+          </li>
+          <li class="itinerary-item">
+            <span class="itinerary-icon">🎉</span
+            ><span class="itinerary-text">Show</span>
+          </li>
+          <li class="itinerary-item">
+            <span class="itinerary-icon">🪅</span
+            ><span class="itinerary-text">Piñata y pastel</span>
+          </li>
+        </ol>
+      </section>
+
+      <div class="divider" data-star aria-hidden="true"><span>⭐</span></div>
+
+      <!-- RSVP -->
+      <section
+        class="section rsvp-section reveal"
+        aria-label="Confirmar asistencia"
+      >
+        <p class="section-eyebrow">Cuéntanos</p>
+        <h2 class="section-title">¿Nos acompañas?</h2>
+        <div class="glass-card rsvp-card">
+          <div class="field">
+            <label for="rsvp-name">Nombre</label>
+            <input
+              id="rsvp-name"
+              type="text"
+              placeholder="Tu nombre"
+              autocomplete="name"
+            />
+          </div>
+          <div class="field">
+            <label for="rsvp-guests">¿Cuántos acompañantes?</label>
+            <input
+              id="rsvp-guests"
+              type="number"
+              min="0"
+              max="20"
+              inputmode="numeric"
+              placeholder="0"
+            />
+          </div>
+          <div class="field">
+            <label for="rsvp-message">Mensaje especial para Isabella</label>
+            <textarea
+              id="rsvp-message"
+              rows="3"
+              placeholder="Escribe unas palabras con cariño…"
+            ></textarea>
+          </div>
+          <button id="rsvp-submit" class="rsvp-btn" type="button">
+            Confirmar asistencia 🤠💌
+          </button>
+        </div>
+      </section>
+
+      <div class="divider" data-star aria-hidden="true"><span>⭐</span></div>
+
+      <!-- REGALOS -->
+      <section
+        class="section gifts-section reveal"
+        aria-label="Sugerencias de regalo"
+      >
+        <div class="glass-card gifts-card">
+          <p class="gifts-text">
+            Tu presencia es lo más importante para Isabella, pero si deseas
+            obsequiarle algo, aquí hay algunas ideas:
+          </p>
+          <button
+            id="gift-toggle"
+            class="gift-btn"
+            type="button"
+            aria-expanded="false"
+            aria-controls="gift-suggestions"
+          >
+            💌 Ver sugerencias
+          </button>
+          <ul id="gift-suggestions" class="gift-list" hidden>
+            <li>🧸 Peluches de Toy Story</li>
+            <li>🎨 Set de manualidades para pintar</li>
+            <li>📚 Libros de cuentos ilustrados</li>
+            <li>👗 Ropita talla 2 años</li>
+            <li>🎁 Sobre para su fondo de ahorro</li>
+          </ul>
+        </div>
+      </section>
+
+      <div class="wide-gif-wrap reveal">
+        <img
+          class="wide-gif"
+          src="https://i.giphy.com/9Jp68LHctc8Qo.webp"
+          alt="Animación festiva de Toy Story"
+          loading="lazy"
+        />
+      </div>
+
+      <p class="closing-text reveal">¡TE ESPERO! 🤠✨</p>
+
+      <!-- FOOTER -->
+      <footer class="footer">
+        <p class="footer-text">Hecho con amor por</p>
+        <a
+          class="duskyberry-pill"
+          href="https://wa.me/8442934546?text=Hola%2C%20buenas%20tardes%2C%20%C2%BFpuedes%20darme%20informaci%C3%B3n%20para%20obtener%20una%20invitaci%C3%B3n%20web%3F"
+          target="_blank"
+          rel="noopener"
+          >duskyberry 2026 🌙</a
+        >
+      </footer>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
